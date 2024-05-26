@@ -1,0 +1,24 @@
+import random
+def swg(computer,mine):
+    if (computer == mine):
+        return None
+    if (computer=='s' and mine=='g'):
+        return True
+    elif(computer=='w'and mine=='s'):
+        return True
+    elif(computer=='g' and mine== 's'):
+        return True
+    else:
+        return False
+choice=('s','w','g')
+computer=random.randint(0,2)
+computer=choice[computer]
+mine = input("Enter Your Choice for s,w,g: ")
+win=swg(computer,mine)
+print(f"you chose {mine} and computer chose {computer}")
+if win is None:
+    print("Match Draw")
+elif win:
+    print("You Won")
+else:
+    print("You Lose")
